@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1482877216 source:c:\users\administrator\desktop\_stat获取文件状态\main.cpp
+	<io.h>
+	<iostream>
+	<errno.h>
+	<sys/stat.h>
+
