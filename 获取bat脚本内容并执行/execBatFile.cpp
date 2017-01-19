@@ -5,15 +5,23 @@
 #include <iostream>
 #include <fstream>
 #include <windows.h>
+#include <string.h>
 using namespace std;
 
 int main(int argc, char * args[]){
+	char filePath[MAX_PATH] = {0};
 	if(argc != 2){
 		cout << "command line must like this:" << endl;
 		cout << "execBatFile[.exe] batFilePath" << endl;
-		return 0;
+		cout << "input batFilePath:";
+		cin >> filePath;
+	} else {
+		if(strlen(args[1]) > MAX_PATH){
+			cout << "invalidate batFilePath, path length must <= " << MAX_PATH << endl;
+			return 0;
+		}
+		strcpy(filePath, args[1]);
 	}
-	char * filePath = args[1];
 	ifstream f(filePath);
 	if(NULL == f){
 		cout << "batFilePath error!" << endl;
