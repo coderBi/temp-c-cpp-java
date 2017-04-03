@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1491195718 source:c:\users\administrator\desktop\查看gif文件夹，生成html页面\main.cpp
+	<iostream>
+	<io.h>
+	<string.h>
+	<fstream>
+	<windows.h>
+
