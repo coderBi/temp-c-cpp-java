@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1491378605 source:c:\users\administrator\desktop\判断vector对象传递的是值还是引用\main.cpp
+	<iostream>
+	<vector>
+

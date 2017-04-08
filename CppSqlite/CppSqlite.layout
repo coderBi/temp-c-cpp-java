@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="main.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="4643" topLine="121" />
+	<File name="main.cpp" open="1" top="1" tabpos="0">
+		<Cursor position="2285" topLine="69" />
 	</File>
 	<File name="sqlite\sqlite3.c" open="0" top="0" tabpos="0">
 		<Cursor position="5629035" topLine="156256" />
