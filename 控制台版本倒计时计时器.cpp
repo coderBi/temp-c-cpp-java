@@ -13,7 +13,7 @@ int main(){
 	//得到控制台句柄
 	hout = GetStdHandle(STD_OUTPUT_HANDLE);
 
-	cout << "input the time to count: ";
+	cout << "input the second to count: ";
 	cin >>  t;
 	
 	int preX = 0;
