@@ -4,6 +4,7 @@
 //②： 对于 void (*pfunc)(); 定义了一个函数指针变量。由于是变量，不能有函数体。对于 pfunc() 跟 （*pfunc）() 这两个的效果也是一样的。
 //③：不支持函数名的二次取地址  也就是 func == &func 但是&&func是错的。 
 //④：注意，pfunc != &pfunc 因为pfunc是一个指针变量，对它取地址是得到存这个变量的地址。 &&pfunc 没有意义。
+//note: 此文件不能用g++编译，只能gcc。
 
 void* a() { return (void*)998; }
 
@@ -28,3 +29,18 @@ int main()
 	printf("%u\n", (*bool(100))(&a));
 	return 0;
 }
+
+
+/*扩展：
+	这是一个函数申明，因为 *f1没有被扩起来
+	返回值是void(**)(int)，如果 (*f1)那么返回值是 void(*)(int)
+	参数是（int, void(*)(int)）
+*/
+void (*f1(int,void(*)(int)))(int);
+
+/*扩展
+	这是一个函数指针
+	返回值是 void(**)()
+	参数是int
+*/
+void (*(*f2)(int))() = NULL;
