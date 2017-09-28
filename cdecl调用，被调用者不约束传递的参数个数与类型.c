@@ -11,6 +11,7 @@ void func(int x, ...){
 	va_list args;
 	va_start(args,x); //第二个参数指示从x之后开始取值
 	int num, i;
+
 	for(i = 0; i < 2; i++){
 		num = va_arg(args,int); //取出一个参数，并且转换为int
 		printf("%d----",num);
